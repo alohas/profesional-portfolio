@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
+@import url("https://use.typekit.net/eux8mxs.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+  font-size: 100%;
+}
+
+body {
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(0, 0, 0, 1)
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+}
+.big-wrap {
+  margin: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  max-height: 54px;
+}
+
+nav > a {
+  justify-self: left;
+}
+
+a > svg {
+  height: 50px;
+  fill: white;
+  transition: fill 0.2s;
+}
+
+a > svg:hover {
+  fill: #ff7b08;
+}
+
+#active {
+  fill: #ff7b08;
+  color: #ff7b08 !important;
+  cursor: default;
+}
+
+div.a-items {
+  justify-self: right;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: max-content max-content;
+  justify-items: right;
+  align-items: center;
+}
+
+div.a-items a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+div.a-items a:hover {
+  color: #ff7b08;
+}
+
+footer {
+  background-color: #ff7b08;
+  padding: 20px;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.some-icons {
+  margin: 0 auto;
+  width: 248px;
+  grid-template-columns: repeat(4, max-content);
+  display: grid;
+  justify-items: center;
+  grid-gap: 1rem;
+}
+
+footer a {
+  height: 50px;
+  width: 50px;
+}
+footer a svg {
+  fill: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+footer a svg:hover {
+  fill: black;
+}
+
+@media (max-width: 765px) {
+  nav {
+    grid-template-columns: 1fr;
+    max-height: unset;
+  }
+
+  .a-items {
+    grid-template-columns: unset !important;
+  }
+
+  .a-items a {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* ANIMATIONS FOR LARGE SCREENS */
+
+@media (min-width: 992px) {
+}
