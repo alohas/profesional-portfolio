@@ -78,7 +78,8 @@ div.a-items {
 
 div.a-items a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-family: courier;
+  font-size: 2rem;
   transition: color 0.2s;
 }
 
@@ -156,6 +157,17 @@ h2 {
   line-height: 1.5;
 }
 
+strong {
+  font-family: eurostile, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+mark {
+  background-color: transparent;
+  font-style: italic;
+}
+
 .profile-pic {
   border-radius: 50%;
   max-height: 300px;
@@ -199,12 +211,26 @@ h2 {
   border-right: gray solid 1px;
 }
 
+body > div > main > section.skills > div > div:nth-child(1) > ul {
+  margin-bottom: 1rem;
+}
+
 .skill-icon {
   display: grid;
   justify-items: center;
   align-items: center;
   fill: #ff7b08;
   margin-bottom: 2rem;
+}
+
+section.skills a {
+  display: block;
+  text-align: center;
+  color: #ff7b08;
+  font-family: eurostile, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
 }
 
 .table h4 {

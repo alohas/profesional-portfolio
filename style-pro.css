@@ -83,12 +83,100 @@ div.a-items {
 
 div.a-items a {
   text-decoration: none;
-  font-size: 1.5rem;
   transition: color 0.2s;
+  font-family: courier;
+  font-size: 2rem;
 }
 
 div.a-items a:hover {
   color: #ff7b08;
+}
+
+h1 {
+  text-align: center;
+  color: #ff7b08;
+  margin: 3rem 0;
+  font-size: 3rem;
+}
+
+.project-even {
+  background-color: #5a5a5a;
+  margin-left: 20%;
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: max-content 2fr;
+  grid-template-areas: "card info";
+}
+
+.project-even .card {
+  grid-area: card;
+}
+
+.project-even .project-info {
+  grid-area: info;
+}
+
+div.project-even > div.card > div.card_side.back {
+  background-color: #ff7b08;
+}
+
+.project-odd {
+  background-color: #ff7b08;
+  margin-right: 20%;
+  padding: 2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2fr max-content;
+  grid-template-areas: "info card";
+}
+
+.project-odd .card {
+  grid-area: card;
+}
+
+.project-even .project-info {
+  grid-area: info;
+}
+
+div.project-odd > div.card > div.card_side.back {
+  background-color: #5a5a5a;
+}
+
+.front img {
+  width: 100%;
+}
+
+.back {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+h3.project-name {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+p.project-desc {
+  font-size: 1.4rem;
+}
+
+.back a {
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-desc {
+  font-family: eurostile, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 footer {
@@ -140,7 +228,40 @@ footer a svg:hover {
   }
 }
 
-/* ANIMATIONS FOR LARGE SCREENS */
+/* FLIP CARDS */
 
-@media (min-width: 992px) {
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+}
+.card_side {
+  height: 15rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.front {
+  background-color: white;
+}
+.back {
+  transform: rotateY(180deg);
+  background-color: black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
 }
