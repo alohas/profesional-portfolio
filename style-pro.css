@@ -56,13 +56,13 @@ nav > a {
   justify-self: left;
 }
 
-a > svg {
+a > svg.logo {
   height: 50px;
   fill: white;
   transition: fill 0.2s;
 }
 
-a > svg:hover {
+a > svg.logo:hover {
   fill: #ff7b08;
 }
 
@@ -101,7 +101,7 @@ h1 {
 
 .project-even {
   background-color: #5a5a5a;
-  margin-left: 20%;
+  margin-left: 30%;
   padding: 2rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -126,7 +126,7 @@ div.project-even > div.card > div.card_side.back {
 
 .project-odd {
   background-color: #ff7b08;
-  margin-right: 20%;
+  margin-right: 30%;
   padding: 2rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
@@ -179,6 +179,41 @@ p.project-desc {
   font-style: normal;
 }
 
+.project-even > div.project-info {
+  text-align: end;
+}
+
+.projects {
+  margin-bottom: 3rem;
+}
+
+.see-more {
+  margin-bottom: 3rem;
+}
+
+.see-more h6 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.see-more a {
+  text-align: center;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: max-content;
+  justify-content: center;
+  transition: 0.5s;
+  fill: white;
+}
+
+.see-more a svg {
+  margin: 0 auto;
+}
+.see-more a:hover {
+  color: #ff7b08;
+  fill: #ff7b08 !important;
+}
+
 footer {
   background-color: #ff7b08;
   padding: 20px;
@@ -195,6 +230,7 @@ footer p {
   width: 248px;
   grid-template-columns: repeat(4, max-content);
   display: grid;
+  grid-gap: 0.1rem;
   justify-items: center;
   grid-gap: 1rem;
 }
@@ -228,9 +264,49 @@ footer a svg:hover {
   }
 }
 
-/* FLIP CARDS */
+@media (max-width: 1600px) {
+  .project-even {
+    margin-left: 20%;
+  }
+  .project-odd {
+    margin-right: 20%;
+  }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .project-even {
+    margin-left: 5%;
+  }
+  .project-odd {
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .project-even {
+    margin-left: 1%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "card" "info";
+  }
+  .project-odd {
+    margin-right: 1%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "card" "info";
+  }
+  .card {
+    justify-self: center;
+  }
+  h3.project-name {
+    text-align: center;
+  }
+  p.project-desc {
+    text-align: center;
+  }
+}
+
+/* FLIP CARDS */
 .card {
+  align-self: center;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
