@@ -91,8 +91,6 @@ div.a-items a {
 div.a-items a:hover {
   color: #ff7b08;
 }
-section {
-}
 
 div.styling {
   background-color: #ff7b08;
@@ -118,6 +116,7 @@ h3 span {
   font-weight: 400;
   font-style: normal;
   font-size: 1.8rem;
+  color: black;
 }
 
 footer {
@@ -159,6 +158,19 @@ footer a svg:hover {
   nav {
     grid-template-columns: 1fr;
     max-height: unset;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h3 span {
+    font-size: 1.3rem;
   }
 
   .a-items {
